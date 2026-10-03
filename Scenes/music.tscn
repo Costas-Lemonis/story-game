@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dqq685rd5txrh"]
+
+[ext_resource type="AudioStream" uid="uid://dweqcojbunt3v" path="res://Music/Leaving Home.mp3" id="1_fbmny"]
+
+[node name="Music" type="AudioStreamPlayer2D" unique_id=1679907329]
+process_mode = 3
+stream = ExtResource("1_fbmny")
+autoplay = true
+bus = &"Music"

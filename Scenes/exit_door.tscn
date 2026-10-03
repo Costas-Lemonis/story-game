@@ -5,15 +5,19 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_888in"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snp7k"]
+size = Vector2(54, 43)
 
 [node name="ExitDoor" type="Area2D" unique_id=2066892738]
 script = ExtResource("1_elbft")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1272378641]
-scale = Vector2(17.5, 17.5)
+self_modulate = Color(16.427145, 0, 0, 1)
+position = Vector2(9.536743e-07, -9.536743e-07)
+scale = Vector2(54, 25.999998)
 texture = SubResource("PlaceholderTexture2D_888in")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=148287661]
+position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_snp7k")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
