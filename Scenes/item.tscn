@@ -2,16 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bc5k3y7e5tfkl" path="res://Scripts/item.gd" id="1_ys0gr"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_iltfy"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_snp7k"]
+radius = 15.033297
 
 [node name="Item" type="Area2D" unique_id=293090978]
 script = ExtResource("1_ys0gr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2030909343]
 scale = Vector2(21.155, 21.155)
-texture = SubResource("PlaceholderTexture2D_iltfy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=84833372]
 shape = SubResource("CircleShape2D_snp7k")

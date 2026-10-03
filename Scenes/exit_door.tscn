@@ -11,6 +11,7 @@ size = Vector2(54, 43)
 script = ExtResource("1_elbft")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1272378641]
+visible = false
 self_modulate = Color(16.427145, 0, 0, 1)
 position = Vector2(9.536743e-07, -9.536743e-07)
 scale = Vector2(54, 25.999998)

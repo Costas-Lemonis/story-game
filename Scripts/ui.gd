@@ -10,6 +10,7 @@ extends CanvasLayer
 @onready var item_panel = $ItemPanel
 @onready var title_label = $ItemPanel/Title
 @onready var description_label = $ItemPanel/Description
+@onready var item_image = $ItemPanel/ItemImage
 
 @onready var inventory_title = $InventoryPanel/InventoryTitle
 @onready var slot1 = $InventoryPanel/Slot1
@@ -148,14 +149,15 @@ func hide_interaction():
 # ITEM PANEL
 # =========================
 
-func show_item(item_name: String, description: String, item):
+func show_item(item_name: String, description: String, item, image: Texture2D):
 
 	interaction_label.visible = false
-
 	item_panel.visible = true
 
 	title_label.text = item_name
 	description_label.text = description
+
+	item_image.texture = image
 
 	current_item = item
 

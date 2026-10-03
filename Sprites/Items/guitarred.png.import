@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://prkf14m46q5q"
-path="res://.godot/imported/env.png-0eadce6168029b33ba7554f43ee377de.ctex"
+uid="uid://bgil120gtf18a"
+path="res://.godot/imported/guitarred.png-b1c42924dbba1aa561dd6b7bf4e28524.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprits/env.png"
-dest_files=["res://.godot/imported/env.png-0eadce6168029b33ba7554f43ee377de.ctex"]
+source_file="res://Sprites/Items/guitarred.png"
+dest_files=["res://.godot/imported/guitarred.png-b1c42924dbba1aa561dd6b7bf4e28524.ctex"]
 
 [params]
 

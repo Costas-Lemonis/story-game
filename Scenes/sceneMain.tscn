@@ -4,10 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://dq57gbi403kev" path="res://Scenes/item.tscn" id="2_iltfy"]
 [ext_resource type="Script" uid="uid://qh6v4e71lg8t" path="res://Scripts/ui.gd" id="3_0ofg4"]
 [ext_resource type="FontFile" uid="uid://pg44fnhmnf1g" path="res://Fonts/PVF_Tickler.otf" id="3_btmvg"]
-[ext_resource type="Texture2D" uid="uid://prkf14m46q5q" path="res://Sprits/env.png" id="4_86yrr"]
+[ext_resource type="Texture2D" uid="uid://der6gfndws4kk" path="res://Sprites/Items/football.png" id="3_t75an"]
+[ext_resource type="Texture2D" uid="uid://prkf14m46q5q" path="res://Sprites/env.png" id="4_86yrr"]
 [ext_resource type="PackedScene" uid="uid://7sq35lygnpr4" path="res://Scenes/exit_door.tscn" id="4_lietn"]
-[ext_resource type="Texture2D" uid="uid://cpkcit5r0qp7l" path="res://Sprits/tilemaps.png" id="5_37aao"]
-[ext_resource type="Texture2D" uid="uid://13aohhy1mvcw" path="res://Sprits/objects.png" id="7_iv07e"]
+[ext_resource type="Texture2D" uid="uid://cpkcit5r0qp7l" path="res://Sprites/tilemaps.png" id="5_37aao"]
+[ext_resource type="Texture2D" uid="uid://13aohhy1mvcw" path="res://Sprites/objects.png" id="7_iv07e"]
+[ext_resource type="Texture2D" uid="uid://ctie2wtg1istj" path="res://Sprites/Items/oldphoto.png" id="10_7l5ll"]
+[ext_resource type="Texture2D" uid="uid://btw27gpwcy4yx" path="res://Sprites/Items/photored.png" id="11_h2xp0"]
+[ext_resource type="Texture2D" uid="uid://kt75k7my7jie" path="res://Sprites/Items/guitar.png" id="11_w234l"]
+[ext_resource type="Texture2D" uid="uid://nb04ygf43gpd" path="res://Sprites/Items/footballred.png" id="12_0jcfk"]
+[ext_resource type="Texture2D" uid="uid://cuwskaq1086c" path="res://Sprites/Items/book.png" id="12_clune"]
+[ext_resource type="Texture2D" uid="uid://crbb4gy2gmn74" path="res://Sprites/Items/laptop.png" id="13_7x2vl"]
+[ext_resource type="Texture2D" uid="uid://bgil120gtf18a" path="res://Sprites/Items/guitarred.png" id="14_cri26"]
+[ext_resource type="Texture2D" uid="uid://bjxo6r2ib2tpa" path="res://Sprites/Items/diploma.png" id="14_smbcn"]
+[ext_resource type="Texture2D" uid="uid://c1tvjptuoq68r" path="res://Sprites/Items/bookred.png" id="16_7l0lw"]
+[ext_resource type="Texture2D" uid="uid://b284ic4k0wy0r" path="res://Sprites/Items/laptopred.png" id="18_l8117"]
+[ext_resource type="Texture2D" uid="uid://cjub1je8lyxgh" path="res://Sprites/Items/diplomared.png" id="20_cb1r4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hyhkd"]
 
@@ -5264,8 +5276,8 @@ vertical_alignment = 1
 visible = false
 offset_left = 320.0
 offset_top = 355.0
-offset_right = 849.0
-offset_bottom = 504.0
+offset_right = 930.0
+offset_bottom = 612.0
 
 [node name="ColorRect" type="ColorRect" parent="UI/ItemPanel" unique_id=1269609741]
 layout_mode = 1
@@ -5275,6 +5287,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="ItemImage" type="TextureRect" parent="UI/ItemPanel" unique_id=1801187798]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 133.0
+offset_bottom = 156.0
+texture = ExtResource("3_t75an")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Title" type="Label" parent="UI/ItemPanel" unique_id=1941256752]
 layout_mode = 1
@@ -5297,23 +5319,23 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 42.0
+offset_left = 144.0
+offset_top = 37.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_btmvg")
-text = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
-horizontal_alignment = 1
+text = "A faded photograph from many years ago. You are standing outside this house with your family, smiling at a time when you had no idea how quickly everything would change. The edges are worn from being handled so many times."
+autowrap_mode = 2
 
 [node name="Take" type="Label" parent="UI/ItemPanel" unique_id=359149491]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 96.0
+offset_left = 208.0
 offset_top = -39.0
-offset_right = 189.0
+offset_right = 301.0
 offset_bottom = -16.0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.2103897, 0.69564956, 0.29261863, 1)
@@ -5566,7 +5588,7 @@ tile_map_data = PackedByteArray("AAANAAwAAAABAAYAAAAOAAwAAAACAAYAAAAPAAwAAAABAAY
 tile_set = SubResource("TileSet_76xx5")
 
 [node name="House" type="TileMapLayer" parent="." unique_id=1779002071]
-tile_map_data = PackedByteArray("AAAFAAwAAAAAAAIAAAARAAwAAAACAAIAAAAQAAwAAAABAAIAAAAPAAwAAAABAAIAAAAOAAwAAAABAAIAAAANAAwAAAABAAUAAAAMAAwAAAABAAIAAAALAAwAAAABAAIAAAAKAAwAAAABAAIAAAAIAAwAAAABAAIAAAAHAAwAAAABAAIAAAAGAAwAAAABAAIAAAAFAAsAAAAAAAEAAAAFAAoAAAADAAEAAAAFAAkAAAAAAAEAAAAFAAgAAAAAAAEAAAAFAAUAAAAAAAQAAAAFAAQAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAAAAAAAAAAAAAAGAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAAEAAMAAAAMAAAAAAABAAAAAAAOAAAAAAAEAAAAAAAQAAAAAAABAAAAAAARAAAAAAACAAAAAAARAAMAAAACAAEAAAARAAQAAAAFAAEAAAARAAUAAAACAAQAAAARAAYAAAACAAEAAAARAAcAAAACAAEAAAARAAgAAAAFAAEAAAARAAkAAAACAAEAAAARAAsAAAACAAEAAAANAAUAAAAAAAQAAAAOAAUAAAAHAAQAAAAPAAUAAAAHAAQAAAAQAAUAAAAHAAQAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAkAAAAEAAQAAAANAAoAAAAEAAQAAAANAAsAAAAEAAQAAAANAAAAAAABAAMAAAANAAEAAAAEAAQAAAANAAIAAAAEAAQAAAANAAMAAAAEAAQAAAALAAAAAAABAAAAAAAKAAEAAAAEAAQAAAAKAAIAAAAEAAQAAAAKAAMAAAAEAAQAAAAKAAQAAAAEAAQAAAAGAAUAAAAHAAQAAAAHAAUAAAAHAAQAAAAFAAcAAAADAAEAAAAJAAUAAAAHAAQAAAAKAAUAAAABAAQAAAANAAgAAAAEAAcAAAANAAQAAAAEAAcAAAAIAAUAAAAJAAQAAAAJAAwAAAAJAAQAAAARAAIAAAACAAEAAAAPAAAAAAABAAAAAAARAAoAAAAFAAEAAAAFAAIAAAADAAEAAAAHAAAAAAAEAAAAAAAFAAYAAAAAAAEAAAARAAEAAAACAAEAAAA=")
+tile_map_data = PackedByteArray("AAAFAAwAAAAAAAIAAAARAAwAAAACAAIAAAAQAAwAAAABAAIAAAAPAAwAAAABAAIAAAAOAAwAAAABAAIAAAANAAwAAAABAAUAAAAMAAwAAAABAAIAAAALAAwAAAABAAIAAAAKAAwAAAABAAIAAAAIAAwAAAABAAIAAAAHAAwAAAABAAIAAAAGAAwAAAABAAIAAAAFAAsAAAAAAAEAAAAFAAoAAAADAAEAAAAFAAkAAAAAAAEAAAAFAAgAAAAAAAEAAAAFAAUAAAAAAAQAAAAFAAQAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAAAAAAAAAAAAAAGAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAAEAAMAAAAMAAAAAAABAAAAAAAOAAAAAAAEAAAAAAAQAAAAAAABAAAAAAARAAAAAAACAAAAAAARAAMAAAACAAEAAAARAAQAAAAFAAEAAAARAAUAAAACAAQAAAARAAYAAAACAAEAAAARAAcAAAACAAEAAAARAAgAAAAFAAEAAAARAAkAAAACAAEAAAARAAsAAAACAAEAAAANAAUAAAAAAAQAAAAOAAUAAAAHAAQAAAAPAAUAAAAHAAQAAAAQAAUAAAAHAAQAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAkAAAAEAAQAAAANAAoAAAAEAAQAAAANAAsAAAAEAAQAAAANAAAAAAABAAMAAAANAAEAAAAEAAQAAAANAAIAAAAEAAQAAAANAAMAAAAEAAQAAAALAAAAAAABAAAAAAAKAAEAAAAEAAQAAAAKAAIAAAAEAAQAAAAKAAMAAAAEAAQAAAAKAAQAAAAEAAQAAAAGAAUAAAAHAAQAAAAHAAUAAAAHAAQAAAAFAAcAAAADAAEAAAAJAAUAAAAHAAQAAAAKAAUAAAABAAQAAAANAAgAAAAEAAcAAAANAAQAAAAEAAcAAAAIAAUAAAAJAAQAAAAJAAwAAAAJAAMAAAARAAIAAAACAAEAAAAPAAAAAAABAAAAAAARAAoAAAAFAAEAAAAFAAIAAAADAAEAAAAHAAAAAAAEAAAAAAAFAAYAAAAAAAEAAAARAAEAAAACAAEAAAA=")
 tile_set = SubResource("TileSet_5buhm")
 
 [node name="Objects" type="TileMapLayer" parent="." unique_id=772876382]
@@ -5587,45 +5609,68 @@ shape = SubResource("RectangleShape2D_snp7k")
 [node name="Photo" parent="." unique_id=293090978 instance=ExtResource("2_iltfy")]
 position = Vector2(471, 212)
 item_name = "Old Photo"
-description = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
+description = "A faded photograph from many years ago. You are standing outside this house with your family, smiling at a time when you had no idea how quickly everything would change. The edges are worn from being handled so many times."
+item_image = ExtResource("10_7l5ll")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Photo" unique_id=1608364781]
+position = Vector2(-1, -2)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("11_h2xp0")
 
 [node name="FootballShirt" parent="." unique_id=1180333546 instance=ExtResource("2_iltfy")]
-position = Vector2(576, 81)
+position = Vector2(728, 81)
 item_name = "Football shirt"
-description = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
+description = "An old football shirt covered in scratches and faded marks. You used to play with your friends almost every afternoon after school. Those games were never really about winning; they were about spending time together before everyone started going their separate ways."
+item_image = ExtResource("3_t75an")
 
-[node name="Photo3" parent="." unique_id=1952214507 instance=ExtResource("2_iltfy")]
+[node name="Sprite2D2" type="Sprite2D" parent="FootballShirt" unique_id=577894588]
+position = Vector2(1, 0)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("12_0jcfk")
+
+[node name="Guitar" parent="." unique_id=1952214507 instance=ExtResource("2_iltfy")]
 position = Vector2(399, 380)
-item_name = "Old Photo"
-description = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
-category = "Future"
+item_name = "Guitar"
+description = "The guitar you bought when you were younger, after deciding that you wanted to learn how to play. You never became an expert, but you spent countless evenings practicing the same songs. Some of your happiest memories are connected to this instrument."
+category = "Personal"
+item_image = ExtResource("11_w234l")
 
-[node name="Photo4" parent="." unique_id=579103328 instance=ExtResource("2_iltfy")]
+[node name="Sprite2D2" type="Sprite2D" parent="Guitar" unique_id=398575051]
+position = Vector2(1, 0)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("14_cri26")
+
+[node name="RecipeBook" parent="." unique_id=579103328 instance=ExtResource("2_iltfy")]
 position = Vector2(838, 471)
-item_name = "Old Photo"
-description = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
+item_name = "Recipe book"
+description = "An old recipe book filled with handwritten notes and small stains from years of use. Many of the recipes remind you of meals shared with people who were important to you. You know you could find these recipes somewhere else, but this particular book carries memories that cannot be replaced."
+category = "Personal"
+item_image = ExtResource("12_clune")
+
+[node name="Sprite2D2" type="Sprite2D" parent="RecipeBook" unique_id=1923747007]
+position = Vector2(1, 0)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("16_7l0lw")
+
+[node name="Laptop" parent="." unique_id=851500645 instance=ExtResource("2_iltfy")]
+position = Vector2(578, 76)
+item_name = "Laptop#"
+description = "Your old laptop, filled with unfinished projects, ideas, and plans. It has been with you through university, late nights, failures, and moments when you finally got something right. There is still work waiting for you on it."
 category = "Future"
+item_image = ExtResource("13_7x2vl")
 
-[node name="Photo5" parent="." unique_id=851500645 instance=ExtResource("2_iltfy")]
-position = Vector2(735, 76)
-item_name = "Old Photo"
-description = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
-category = "Personal"
+[node name="Sprite2D2" type="Sprite2D" parent="Laptop" unique_id=1796820895]
+position = Vector2(1, 0)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("18_l8117")
 
-[node name="Photo6" parent="." unique_id=293246690 instance=ExtResource("2_iltfy")]
+[node name="Diploma" parent="." unique_id=293246690 instance=ExtResource("2_iltfy")]
 position = Vector2(719, 364)
-item_name = "Old Photo"
-description = "A photo from your first year at university.
-Everyone in the picture seems happy.
-You haven't seen some of them in years."
-category = "Personal"
+item_name = "Diploma"
+description = "Your diploma, carefully kept in a frame. It represents years of studying, difficult decisions, and the effort it took to reach this point. Looking at it reminds you that leaving this place is not the end of your journey. It may actually be the beginning of something new."
+item_image = ExtResource("14_smbcn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Diploma" unique_id=1699481162]
+position = Vector2(1, 0)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("20_cb1r4")
