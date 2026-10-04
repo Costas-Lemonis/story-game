@@ -5598,6 +5598,7 @@ tile_set = SubResource("TileSet_snp7k")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=530543563 groups=["Player"]]
 position = Vector2(478, 584)
 script = ExtResource("1_mqgry")
+speed = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=717044941]
 scale = Vector2(1.5, 1.5)

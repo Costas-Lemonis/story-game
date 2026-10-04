@@ -42,7 +42,9 @@ var intro_messages = [
 	"The time has finally come. \nToday, you have to leave this house behind.",
 	"You have spent years here. \nEvery room holds a memory.",
 	"But you cannot take everything with you.",
-	"Choose carefully what you want to keep.",
+	"Take your time.\nLook around carefully, and don't rush your choices.",
+	"Choose carefully what you want to keep \nand that truly matter to you.",
+	"When you're ready, leave the house.",
 	"Use the arrows to move."
 ]
 
